@@ -1,4 +1,4 @@
-# 💳 Sistema de Normalización de Transacciones Heterogéneas
+# 💳 Sistema de Normalización de Transacciones Multifuente
 
 Sistema interactivo desarrollado en Python para procesar, normalizar y auditar transacciones financieras provenientes de diversas plataformas externas (Stripe, PayPal, Core Bancario, POS). Incluye validación estricta bajo un modelo de datos bancario, configuración desacoplada dual (técnica y funcional) y exploración mediante un panel interactivo con Streamlit.
 
