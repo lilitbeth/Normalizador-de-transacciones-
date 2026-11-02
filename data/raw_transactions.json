@@ -1,0 +1,65 @@
+[
+  {
+    "source_system": "stripe",
+    "charge_id": "ch_1N4mK2Lkj3",
+    "created": "2026-03-15 14:30:00",
+    "amount_cents": 15450,
+    "currency_code": "usd",
+    "status": "paid",
+    "movement": "credit"
+  },
+  {
+    "source_system": "paypal",
+    "txn_id": "PAY-987654321",
+    "payment_date": "16/03/2026 09:12:45",
+    "total_amount": "82.50",
+    "currency": "EUR",
+    "payment_status": "Approved",
+    "intent": "abono"
+  },
+  {
+    "source_system": "core_bancario",
+    "referencia": "TRANS-00129",
+    "fecha_operacion": "2026-03-16T18:45:10",
+    "monto": -320.00,
+    "moneda": "USD",
+    "estado_transaccion": "completado",
+    "tipo_operacion": "cargo"
+  },
+  {
+    "source_system": "pos_terminal",
+    "ticket_num": "TK-88910",
+    "timestamp": "2026/03/17 11:00:22",
+    "val": "45.00",
+    "curr": "GBP",
+    "state": "waiting",
+    "entry_mode": "debit"
+  },
+  {
+    "source_system": "stripe",
+    "charge_id": "ch_ERR_001",
+    "created": "fecha_invalida_texto",
+    "amount_cents": -500,
+    "currency_code": "xyz",
+    "status": "denied",
+    "movement": "desconocido"
+  },
+  {
+    "source_system": "paypal",
+    "txn_id": "PAY-ERR-002",
+    "payment_date": "2026-03-18",
+    "total_amount": "no_es_un_numero",
+    "currency": "USD",
+    "payment_status": "rejected",
+    "intent": "egreso"
+  },
+  {
+    "source_system": "desconocido",
+    "id": "UNK-9999",
+    "fecha": "2026-03-19 10:00:00",
+    "monto": 120.0,
+    "moneda": "CAD",
+    "estado": "pendiente",
+    "tipo": "ingreso"
+  }
+]

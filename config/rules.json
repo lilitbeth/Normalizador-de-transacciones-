@@ -1,0 +1,34 @@
+{
+  "supported_currencies": ["USD", "EUR", "GBP", "JPY", "CAD"],
+  "default_currency": "USD",
+  "status_mapping": {
+    "paid": "COMPLETED",
+    "success": "COMPLETED",
+    "completado": "COMPLETED",
+    "approved": "COMPLETED",
+    "waiting": "PENDING",
+    "pendiente": "PENDING",
+    "in_process": "PENDING",
+    "denied": "FAILED",
+    "rejected": "FAILED",
+    "fallido": "FAILED",
+    "cancelled": "FAILED"
+  },
+  "type_mapping": {
+    "ingreso": "CREDIT",
+    "abono": "CREDIT",
+    "credit": "CREDIT",
+    "egreso": "DEBIT",
+    "cargo": "DEBIT",
+    "debit": "DEBIT"
+  },
+  "date_formats": [
+    "%Y-%m-%dT%H:%M:%S",
+    "%Y-%m-%d %H:%M:%S",
+    "%Y/%m/%d %H:%M:%S",
+    "%d/%m/%Y %H:%M:%S",
+    "%d-%m-%Y %H:%M:%S",
+    "%Y-%m-%d",
+    "%d/%m/%Y"
+  ]
+}

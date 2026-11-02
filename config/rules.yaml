@@ -1,0 +1,27 @@
+# Reglas de negocio para normalización de transacciones
+monedas_permitidas:
+  - USD
+  - EUR
+  - GBP
+  - JPY
+  - CAD
+
+moneda_por_defecto: USD
+
+estados_equivalentes:
+  COMPLETED: [paid, success, completado, approved]
+  PENDING: [waiting, pendiente, in_process]
+  FAILED: [denied, rejected, fallido, cancelled]
+
+tipos_movimiento:
+  CREDIT: [ingreso, abono, credit]
+  DEBIT: [egreso, cargo, debit]
+
+formatos_fecha_admitidos:
+  - "%Y-%m-%dT%H:%M:%S"
+  - "%Y-%m-%d %H:%M:%S"
+  - "%Y/%m/%d %H:%M:%S"
+  - "%d/%m/%Y %H:%M:%S"
+  - "%d-%m-%Y %H:%M:%S"
+  - "%Y-%m-%d"
+  - "%d/%m/%Y"
