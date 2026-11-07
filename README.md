@@ -39,24 +39,44 @@ En cumplimiento con los requerimientos de la actividad, las decisiones de diseñ
 transacciones-normalizador/
 │
 ├── config/
-│   ├── rules.json              # Configuración técnica (JSON)
-│   └── rules.yaml              # Configuración funcional/declarativa (YAML)
+│   ├── rules.json                 # Configuración técnica de normalización (JSON)
+│   ├── rules.yaml                 # Configuración funcional/declarativa de reglas (YAML)
+│   └── agent_config.yaml          # Configuración del agente (rol, prompt de sistema y modelo)
 │
 ├── data/
-│   └── raw_transactions.json   # Dataset heterogéneo con casos válidos e inconsistencias
+│   └── raw_transactions.json      # Dataset heterogéneo con casos válidos e inconsistencias
+│
+├── docs/
+│   └── AI_PAIRING_LOG.md          # Bitácora de supervisión técnica y uso consciente de IA
 │
 ├── src/
 │   ├── __init__.py
-│   ├── config_loader.py        # Cargador unificado de reglas (JSON y YAML)
-│   ├── normalizer.py           # Detección de origen y normalización de campos
-│   ├── validator.py            # Validación de integridad y registro de auditoría
-│   └── metrics.py              # Cálculo de métricas y acumulados
+│   │
+│   ├── agents/                    # Arquitectura de Agentes
+│   │   ├── __init__.py
+│   │   ├── base_agent.py          # Clase base abstracta del ciclo agentico
+│   │   └── transaction_agent.py   # Agente especializado de auditoría y conciliación
+│   │
+│   ├── skills/                    # Catálogo de Skills Propias
+│   │   ├── __init__.py
+│   │   ├── base_skill.py          # Contrato e interfaz estándar para skills
+│   │   ├── normalizer_skill/      # Skill 1: Normalización de esquemas heterogéneos
+│   │   │   ├── SKILL.md           # Especificación técnica y contrato de la skill
+│   │   │   └── skill.py           # Implementación ejecutable
+│   │   ├── auditor_skill/         # Skill 2: Auditoría y clasificación de severidad
+│   │   │   ├── SKILL.md           # Especificación técnica y contrato de la skill
+│   │   │   └── skill.py           # Implementación ejecutable
+│   │   └── remediation_skill/     # Skill 3: Inferencia de remediación asistida
+│   │       ├── SKILL.md           # Especificación técnica y contrato de la skill
+│   │       └── skill.py           # Implementación ejecutable
+│   │
+│   ├── config_loader.py           # Cargador unificado de reglas (JSON y YAML)
+│   ├── normalizer.py              # Detección de origen y normalización de campos
+│   ├── validator.py               # Validación de integridad y registro de auditoría
+│   └── metrics.py                 # Cálculo de métricas y acumulados financieros
 │
-├── app.py                      # Interfaz interactiva en Streamlit
-├── requirements.txt            # Dependencias del proyecto
-├── NOTA_TECNICA.md             # Memoria técnica sobre diseño y uso de IA
-└── README.md                   # Este archivo
-```
+├── app.py                         # Interfaz interact
+---
 
 ---
 
