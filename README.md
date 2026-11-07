@@ -122,4 +122,21 @@ Una vez ejecutado, la aplicación se abrirá en tu navegador predeterminado (usu
 | **Monedas Soportadas** | Conversión a mayúsculas y validación contra lista oficial: `USD`, `EUR`, `GBP`, `JPY`, `CAD`. |
 | **Estados Homologados** | Mapeo canónico a `COMPLETED`, `PENDING` o `FAILED`. |
 
+# Sistema de Normalización y Auditoría Financiera Basado en Agentes
+
+## Arquitectura de la Solución
+El proyecto fue refactorizado desde una implementación monolítica procedural hacia una arquitectura modular guiada por un Agente Especializado (`TransactionAgent`) respaldado por un catálogo de **Skills propias**:
+
+1. **`transaction_normalizer`**: Estandariza fuentes heterogéneas al modelo canónico.
+2. **`transaction_auditor`**: Verifica reglas financieras y cataloga niveles de severidad de riesgo.
+3. **`transaction_remediator`**: Analiza fallas e infiere propuestas de recuperación sobre el payload original.
+
+## Configuración y Personalización
+- La identidad, rol e instrucciones de comportamiento del agente residen en `config/agent_config.yaml`.
+- Las reglas de negocio permanecen aisladas en `config/rules.json` y `config/rules.yaml`.
+
+## Ejecución
+```bash
+pip install -r requirements.txt
+streamlit run app.py
 ---
