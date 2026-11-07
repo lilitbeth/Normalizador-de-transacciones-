@@ -1,0 +1,37 @@
+{
+  "currency_aliases": {
+    "US$": "USD",
+    "$": "USD",
+    "DOLLAR": "USD",
+    "DOLARES": "USD",
+    "€": "EUR",
+    "EURO": "EUR",
+    "EUROS": "EUR",
+    "£": "GBP",
+    "POUND": "GBP",
+    "¥": "JPY",
+    "YEN": "JPY",
+    "C$": "CAD",
+    "CAD$": "CAD"
+  },
+  "status_aliases": {
+    "settled": "COMPLETED",
+    "cleared": "COMPLETED",
+    "authorized": "COMPLETED",
+    "processing": "PENDING",
+    "hold": "PENDING",
+    "declined": "FAILED",
+    "voided": "FAILED",
+    "chargeback": "FAILED"
+  },
+  "fuzzy_date_regexes": [
+    {
+      "pattern": "^(\\d{4})\\.(\\d{2})\\.(\\d{2})\\s+(\\d{2}):(\\d{2}):(\\d{2})$",
+      "format": "%Y.%m.%d %H:%M:%S"
+    },
+    {
+      "pattern": "^(\\d{2})\\.(\\d{2})\\.(\\d{4})$",
+      "format": "%d.%m.%Y"
+    }
+  ]
+}
